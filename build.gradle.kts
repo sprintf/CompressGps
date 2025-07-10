@@ -57,7 +57,7 @@ publishing {
             from(components["java"])
             
             pom {
-                name.set("CompressGps")
+                name.set("compress-gps")
                 description.set("High-performance GPS telemetry compression library for racing applications")
                 url.set("https://github.com/sprintf/CompressGps")
                 

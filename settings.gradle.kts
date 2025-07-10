@@ -1,1 +1,1 @@
-rootProject.name = "CompressGps"
+rootProject.name = "compress-gps"
