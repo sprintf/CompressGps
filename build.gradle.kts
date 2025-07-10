@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.normtronix"
-version = System.getenv("VERSION") ?: "1.0.1"
+version = System.getenv("VERSION") ?: "1.0.2"
 
 repositories {
     mavenCentral()
