@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    `java-library`
     kotlin("jvm") version "1.9.10"
     `maven-publish`
 }
@@ -40,7 +41,6 @@ tasks.jar {
             "Implementation-Title" to "CompressGps",
             "Implementation-Version" to project.version,
             "Implementation-Vendor" to "Normtronix",
-            "Main-Class" to "com.normtronix.GpsCompressedStream"
         )
     }
 }
@@ -79,7 +79,7 @@ publishing {
                 scm {
                     connection.set("scm:git:git://github.com/sprintf/CompressGps.git")
                     developerConnection.set("scm:git:ssh://github.com/sprintf/CompressGps.git")
-                    url.set("https://github.com/sprintf/CompressGps")
+                    url.set("https://github.com/sprintf/CompressGps/tree/main")
                 }
             }
         }
