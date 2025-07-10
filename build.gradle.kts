@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.normtronix"
-version = System.getenv("VERSION") ?: "1.0.2"
+version = System.getenv("VERSION") ?: "1.0.3"
 
 repositories {
     mavenCentral()
@@ -59,7 +59,7 @@ publishing {
             pom {
                 name.set("CompressGps")
                 description.set("High-performance GPS telemetry compression library for racing applications")
-                url.set("https://github.com/paulnormington/CompressGps")
+                url.set("https://github.com/sprintf/CompressGps")
                 
                 licenses {
                     license {
