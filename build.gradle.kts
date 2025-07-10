@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.normtronix"
-version = System.getenv("VERSION") ?: "1.0-SNAPSHOT"
+version = System.getenv("VERSION") ?: "1.0.0"
 
 repositories {
     mavenCentral()
@@ -70,16 +70,16 @@ publishing {
                 
                 developers {
                     developer {
-                        id.set("paulnormington")
+                        id.set("sprintf")
                         name.set("Paul Normington")
-                        email.set("paul@normtronix.com")
+                        email.set("paul@normingtons.org")
                     }
                 }
                 
                 scm {
-                    connection.set("scm:git:git://github.com/paulnormington/CompressGps.git")
-                    developerConnection.set("scm:git:ssh://github.com/paulnormington/CompressGps.git")
-                    url.set("https://github.com/paulnormington/CompressGps")
+                    connection.set("scm:git:git://github.com/sprintf/CompressGps.git")
+                    developerConnection.set("scm:git:ssh://github.com/sprintf/CompressGps.git")
+                    url.set("https://github.com/sprintf/CompressGps")
                 }
             }
         }
