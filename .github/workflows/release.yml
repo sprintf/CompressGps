@@ -61,7 +61,7 @@ jobs:
         tag_name: ${{ github.ref_name }}
         name: Release ${{ steps.version.outputs.VERSION }}
         body: |
-          ## CompressGps Release ${{ steps.version.outputs.VERSION }}
+          ## compress-gps Release ${{ steps.version.outputs.VERSION }}
           
           ### Features
           - High-performance GPS telemetry compression for racing applications
@@ -72,13 +72,13 @@ jobs:
           ### Usage
           ```kotlin
           dependencies {
-              implementation("com.normtronix:CompressGps:${{ steps.version.outputs.VERSION }}")
+              implementation("com.normtronix:compress-gps:${{ steps.version.outputs.VERSION }}")
           }
           ```
           
           ### Files
-          - `CompressGps-${{ steps.version.outputs.VERSION }}.jar` - Main library JAR
-          - `CompressGps-${{ steps.version.outputs.VERSION }}-sources.jar` - Source code JAR
+          - `compress-gps-${{ steps.version.outputs.VERSION }}.jar` - Main library JAR
+          - `compress-gps-${{ steps.version.outputs.VERSION }}-sources.jar` - Source code JAR
         generate_release_notes: true
         prerelease: false
       env:

@@ -38,7 +38,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
 tasks.jar {
     manifest {
         attributes(
-            "Implementation-Title" to "CompressGps",
+            "Implementation-Title" to "compress-gps",
             "Implementation-Version" to project.version,
             "Implementation-Vendor" to "Normtronix",
         )
@@ -59,7 +59,7 @@ publishing {
             pom {
                 name.set("compress-gps")
                 description.set("High-performance GPS telemetry compression library for racing applications")
-                url.set("https://github.com/sprintf/CompressGps")
+                url.set("https://github.com/sprintf/compress-gps")
                 
                 licenses {
                     license {
@@ -77,9 +77,9 @@ publishing {
                 }
                 
                 scm {
-                    connection.set("scm:git:git://github.com/sprintf/CompressGps.git")
-                    developerConnection.set("scm:git:ssh://github.com/sprintf/CompressGps.git")
-                    url.set("https://github.com/sprintf/CompressGps/tree/main")
+                    connection.set("scm:git:git://github.com/sprintf/compress-gps.git")
+                    developerConnection.set("scm:git:ssh://github.com/sprintf/compress-gps.git")
+                    url.set("https://github.com/sprintf/compress-gps/tree/main")
                 }
             }
         }
@@ -88,7 +88,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/sprintf/CompressGps")
+            url = uri("https://maven.pkg.github.com/sprintf/compress-gps")
             credentials {
                 username = System.getenv("GITHUB_ACTOR") ?: ""
                 password = System.getenv("GITHUB_TOKEN") ?: ""

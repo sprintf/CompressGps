@@ -1,35 +1,34 @@
-# CompressGps
+# compress-gps
 
 A high-performance GPS telemetry compression library designed for racing applications, featuring adaptive sampling, lap-based chunking, and optimized binary encoding.
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/paulnormington/CompressGps)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/sprintf/compress-gps)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)]()
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.10-purple.svg)](https://kotlinlang.org/)
 [![Java](https://img.shields.io/badge/java-17+-orange.svg)](https://openjdk.org/)
 
 ## Overview
 
-CompressGps is specifically designed for **endurance racing telemetry** where multiple amateur drivers share vehicles and benefit from comparative data analysis. The library achieves **93%+ compression ratios** while maintaining racing-precision accuracy and corruption resilience.
+compress-gps is specifically designed for **endurance racing telemetry** where multiple amateur drivers share vehicles and benefit from comparative data analysis. The library achieves **93%+ compression ratios** while maintaining racing-precision accuracy and corruption resilience.
 
 ### Key Features
 
-- 🏁 **Racing-Optimized**: Tuned for low-performance cars (200hp, 3000lb, street tires)
+- 🏁 **Racing-Optimized**: Suited for low-performance cars (200hp, 3000lb, street tires)
 - 📊 **Adaptive Sampling**: High-frequency capture in braking/acceleration zones, reduced sampling in straights
 - 🛡️ **Corruption Resilient**: Lap-based chunking ensures corrupted data doesn't affect entire sessions
-- ⚡ **Real-Time Friendly**: Minimal memory footprint (12MB for 3-hour sessions)
+- ⚡ **Real-Time Friendly**: Efficient memory footprint (12MB for 3-hour sessions)
 - 🌐 **Upload Optimized**: Small file sizes perfect for pit stop cellular/WiFi uploads
-- 🎯 **Coaching Ready**: Zone classification for racing line analysis and driver coaching
 
 ## Performance
 
-| Metric | Result |
-|--------|--------|
-| **Compression Ratio** | 14-21:1 typical |
-| **Space Savings** | 93%+ on real racing data |
-| **Memory Usage** | 12MB for 10Hz, 3-hour sessions |
-| **Upload Size** | 4.5KB for 30-minute sessions |
-| **GPS Precision** | ~3.6 feet (1e-5 degrees) |
-| **Heading Precision** | 0.1 degrees |
+| Metric                | Result                             |
+|-----------------------|------------------------------------|
+| **Compression Ratio** | 14-21:1 typical                    |
+| **Space Savings**     | 93%+ on real racing data           |
+| **Memory Usage**      | 12MB for 10Hz GPS, 3-hour sessions |
+| **Upload Size**       | 9KB per hour of data captured      |
+| **GPS Precision**     | ~3.6 feet (1e-5 degrees)           |
+| **Heading Precision** | 0.1 degrees                        |
 
 ## Quick Start
 
@@ -39,7 +38,7 @@ Add to your `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("com.normtronix:compress-gps:1.0.0")
+    implementation("com.normtronix:compress-gps:1.0.4")
 }
 ```
 
@@ -72,44 +71,12 @@ uploadToCloud(compressedData)
 stream.clearData()
 ```
 
-### Advanced: Racing Analytics
 
-```kotlin
-// Analyze racing dynamics
-val zone = stream.classifyDynamicZone(currentPoint, previousPoint)
-when (zone) {
-    RacingZone.BRAKING -> enableHighFrequencySampling()
-    RacingZone.CORNER -> captureRacingLine()
-    RacingZone.ACCELERATION -> analyzeThrottleApplication()
-    RacingZone.STRAIGHT -> reduceSamplingForBandwidth()
-}
 
-// Get compression metrics
-val metrics = stream.getCompressionMetrics()
-println("Compression ratio: ${metrics.compressionRatio}:1")
-println("Space saved: ${metrics.spaceSavedPercent}%")
-```
 
-## Racing Applications
 
-### Endurance Racing Workflow
 
-1. **Real-time Collection**: Minimal memory GPS data gathering during racing
-2. **Pit Stop Processing**: Fast compression during natural race breaks  
-3. **Cloud Upload**: Small file sizes for quick cellular/WiFi transmission
-4. **Driver Coaching**: Immediate analysis for next driver stint
 
-### Multi-Driver Coaching
-
-```kotlin
-// Compare different drivers on same track
-val driver1Data = loadDriverSession("driver1-session.gpsc")
-val driver2Data = loadDriverSession("driver2-session.gpsc")
-
-// Analyze specific corners
-val turn5Analysis = analyzeTurnPerformance(driver1Data, turn = 5)
-// Output: "Driver 1: carry more speed through turn 5 entry"
-```
 
 ## Architecture
 
@@ -209,42 +176,31 @@ object GpsConstants {
 
 ## Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md).
+We welcome contributions!
 
 ### Development Setup
 
 ```bash
-git clone https://github.com/paulnormington/CompressGps.git
-cd CompressGps
+git clone https://github.com/sprintf/compress-gps.git
+cd compress-gps
 ./gradlew build
 ./gradlew test
 ```
 
-### Areas for Contribution
-
-- Track-specific optimization profiles
-- Additional racing analytics
-- gRPC integration examples
-- Performance optimizations
-- Additional telemetry formats
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
 ## Acknowledgments
 
 - Designed for amateur endurance racing community
 - Optimized for low-performance racing cars (200hp, 3000lb, street tires)
 - Tested with real racing telemetry data from multiple tracks
-- Built for driver coaching and performance improvement
 
 ## Support
 
-- 📖 [Documentation](docs/)
-- 🐛 [Issue Tracker](https://github.com/paulnormington/CompressGps/issues)
-- 💬 [Discussions](https://github.com/paulnormington/CompressGps/discussions)
-- 📧 Email: [your-email@example.com]
+- 🐛 [Issue Tracker](https://github.com/sprintf/compress-gps/issues)
+- 💬 [Discussions](https://github.com/sprintf/compress-gps/discussions)
 
 ---
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-CompressGps is a sophisticated GPS telemetry compression system designed for endurance racing applications. It features advanced compression algorithms optimized for real-time data collection, lap-based chunking for corruption resilience, and adaptive sampling tuned for racing dynamics.
+compress-gps is a sophisticated GPS telemetry compression system designed for endurance racing applications. It features advanced compression algorithms optimized for real-time data collection, lap-based chunking for corruption resilience, and adaptive sampling tuned for racing dynamics.
 
 **Primary Use Case**: Endurance racing telemetry where multiple amateur drivers share cars and can learn from each other's data through coaching analysis.
 
